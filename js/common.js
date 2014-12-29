@@ -17,7 +17,7 @@ head.ready(function() {
 
 	$('.js-slide').click(function(event) {
 		$(this).toggleClass('is-clicked');
-		$('.js-show').toggleClass('is-open');
+		$(this).closest('.js-show').toggleClass('is-open');
 		return false;
 	});
 });
