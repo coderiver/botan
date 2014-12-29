@@ -1,216 +1,59 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.index
+	padding: 20px
+	&__ttl
+		margin-bottom: 5px
+		line-height: 1.4
+	&__link
+		font-size: 14px
+		margin-bottom: 10px
+
+.main
+	position: relative
+	height: 100%
+	background: url(../img/bg-main.jpg) 45% 0 no-repeat
+	background-size: cover
+	overflow: hidden
+	+vertical
+	&__in
+		display: inline-block
+		vertical-align: middle
+	&__logo
+		display: block
+		margin-bottom: 60px
+	&__txt
+		font-size: 17px
+		color: #FFF
+		+museo-300
+	&__btn
+		margin-top: 65px
+	.btn
+		display: block
+		margin: 0 auto 22px
+		min-width: 200px
+
+.search
+	position: absolute
+	right: 0
+	bottom: 0
+	&__link
+		position: absolute
+		right: 0
+		bottom: 0
+		padding: 22px 20.5px 20px 23px
+		background: #fff
+		+transition(all 0.3s)
+		&.is-clicked
+			right: 100%
+	&__input
+		display: block
+		right: 0
+		visibility: hidden
+		padding: 15px 30px 22px 0
+		background: #FFF
+		+transform(translateX(100%))
+		+transition(all 0.3s)
+		&.is-open
+			visibility: visible
+			+transform(translateX(0))
+	.input
+		min-width: 185px
