@@ -63,3 +63,5 @@ body { background: white; font-family: Arial, sans-serif; font-size: 12px; line-
 .search__link.is-clicked { right: 100%; }
 .search__input { display: inline-block; padding: 15px 30px 22px 0; background: white; }
 .search .input { min-width: 185px; }
+
+.hohoho { background: red; }
