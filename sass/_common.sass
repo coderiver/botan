@@ -59,18 +59,29 @@ body
 .out
 	height: 100%
 	min-width: 320px
-	min-height: 500px
+	min-height: 535px
 
 .onleft
 	float: left
 .onright
 	float: right
 
+a
+	-webkit-tap-highlight-color: transparent
+	text-decoration: none
+
+//colors
+$white: #fff
+$violet: #8a84bc
+
 // fonts
 +font(Museo-300, Museo-300)
++font(Museo-500, Museo-500)
 
 =museo-300
 	font-family: "Museo-300", Arial, sans-serif
+=museo-500
+	font-family: "Museo-500", Arial, sans-serif	
 
 // buttons, icons, etc.
 .btn
@@ -78,10 +89,12 @@ body
 	padding: 0 35px
 	text-transform: uppercase
 	font-size: 16px
-	color: #FFF
-	background: #8a84bc
+	color: $white
+	background: $violet 
 	box-sizing: border-box
+	letter-spacing: 1.2px
 	-webkit-tap-highlight-color: transparent
+	+museo-300
 	&:active
 		position: relative
 		top: 1px
@@ -99,6 +112,16 @@ body
 
 .search_ico
 	+s(search)
+.cart_ico
+	+s(cart)	
+.menu_ico
+	+s(menu)
+.logo_ico
+	+s(logo)	
+.call_ico
+	+s(call)
+.call_ico-white
+	+s(call2)			
 
 
 

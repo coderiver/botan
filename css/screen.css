@@ -24,21 +24,34 @@ html, body { height: 100%; }
 
 body { background: white; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
-.out { height: 100%; min-width: 320px; min-height: 500px; }
+.out { height: 100%; min-width: 320px; min-height: 535px; }
 
 .onleft { float: left; }
 
 .onright { float: right; }
 
-@font-face { font-family: Museo-300; src: url("fonts/Museo-300.eot"); src: url("fonts/Museo-300.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-300.woff") format("woff"), url("fonts/Museo-300.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.btn { height: 55px; padding: 0 35px; text-transform: uppercase; font-size: 16px; color: white; background: #8a84bc; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+a { -webkit-tap-highlight-color: transparent; text-decoration: none; }
+
+@font-face { font-family: Museo-300; src: url("fonts/Museo-300.eot"); src: url("fonts/Museo-300.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-300.woff2") format("woff2"), url("fonts/Museo-300.woff") format("woff"), url("fonts/Museo-300.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Museo-500; src: url("fonts/Museo-500.eot"); src: url("fonts/Museo-500.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-500.woff2") format("woff2"), url("fonts/Museo-500.woff") format("woff"), url("fonts/Museo-500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.btn { height: 55px; padding: 0 35px; text-transform: uppercase; font-size: 16px; color: white; background: #8a84bc; box-sizing: border-box; letter-spacing: 1.2px; -webkit-tap-highlight-color: transparent; font-family: "Museo-300", Arial, sans-serif; }
 .btn:active { position: relative; top: 1px; }
 
 .input { width: 100%; padding: 15px 10px; border-bottom: 1px solid #8a84bc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Museo-300", Arial, sans-serif; }
 
 .icon { display: inline-block; vertical-align: middle; }
 
-.search_ico { background: url('../img/icons-s124c7adfaa.png') 0 -30px no-repeat; width: 42px; height: 42px; }
+.search_ico { background: url('../img/icons-sdbd143ff9b.png') 0 -329px no-repeat; width: 42px; height: 42px; }
+
+.cart_ico { background: url('../img/icons-sdbd143ff9b.png') 0 -140px no-repeat; width: 58px; height: 58px; }
+
+.menu_ico { background: url('../img/icons-sdbd143ff9b.png') 0 -294px no-repeat; width: 41px; height: 25px; }
+
+.logo_ico { background: url('../img/icons-sdbd143ff9b.png') 0 -238px no-repeat; width: 41px; height: 46px; }
+
+.call_ico { background: url('../img/icons-sdbd143ff9b.png') 0 0 no-repeat; width: 60px; height: 60px; }
+
+.call_ico-white { background: url('../img/icons-sdbd143ff9b.png') 0 -70px no-repeat; width: 60px; height: 60px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
@@ -49,7 +62,7 @@ body { background: white; font-family: Arial, sans-serif; font-size: 12px; line-
 .index__ttl { margin-bottom: 5px; line-height: 1.4; }
 .index__link { font-size: 14px; margin-bottom: 10px; }
 
-.main { position: relative; height: 100%; background: url(../img/bg-main.jpg) 45% 0 no-repeat; background-size: cover; overflow: hidden; text-align: center; font-size: 0; }
+.main { position: relative; height: 100%; background: url(../img/bg-main.jpg) center center no-repeat; background-size: cover; background-attachment: fixed; overflow: hidden; text-align: center; font-size: 0; }
 .main:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .main__in { display: inline-block; vertical-align: middle; }
 .main__logo { display: block; margin-bottom: 60px; }
@@ -57,11 +70,27 @@ body { background: white; font-family: Arial, sans-serif; font-size: 12px; line-
 .main__btn { margin-top: 65px; }
 .main .btn { display: block; margin: 0 auto 22px; min-width: 200px; }
 
-.search { position: absolute; right: -215px; bottom: 0; font-size: 0; -moz-transition: right 0.3s; -o-transition: right 0.3s; -webkit-transition: right 0.3s; transition: right 0.3s; }
-.search.is-open { right: 0; }
-.search__link { display: inline-block; padding: 22px 20.5px 20px 23px; background: white; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
-.search__link.is-clicked { right: 100%; }
-.search__input { display: inline-block; padding: 15px 30px 22px 0; background: white; }
-.search .input { min-width: 185px; }
+.menu { position: fixed; top: 0; left: -325px; bottom: 0; width: 325px; padding-top: 30px; background: #8a84bc; z-index: 2; -moz-transition: right 0.3s; -o-transition: right 0.3s; -webkit-transition: right 0.3s; transition: right 0.3s; }
+.menu.is-open { left: 0; }
+.menu__list { margin-top: 40px; }
+.menu__list li:first-child { border-top: 1px solid white; }
+.menu__link { display: block; padding: 20px 0; text-transform: uppercase; color: white; border-bottom: 1px solid white; font-size: 15px; font-family: "Museo-500", Arial, sans-serif; }
+.menu__link:hover { background: white; color: #8a84bc; }
 
-.hohoho { background: red; }
+.call { color: white; text-align: center; font-size: 15px; font-family: "Museo-500", Arial, sans-serif; }
+
+.nav { position: fixed; top: 0; bottom: 0; left: 0; width: 75px; min-height: 500px; background: white; z-index: 1; }
+.nav__bottom { position: absolute; width: 100%; bottom: 25%; }
+.nav__link { display: block; padding: 20px 0; }
+.nav .is-violet { background: #8a84bc; }
+
+.cart { position: fixed; top: 50px; right: 0; padding: 15px 20px; background: #8a84bc; }
+.cart__in { display: inline-block; padding-left: 20px; font-size: 15px; color: white; vertical-align: middle; font-family: "Museo-500", Arial, sans-serif; }
+.cart .cart_ico { display: inline-block; }
+
+.search { position: fixed; right: -215px; bottom: 0; background: white; font-size: 0; -moz-transition: right 0.3s; -o-transition: right 0.3s; -webkit-transition: right 0.3s; transition: right 0.3s; }
+.search.is-open { right: 0; }
+.search__link { display: inline-block; padding: 22px 20.5px 20px 23px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.search__link.is-clicked { right: 100%; }
+.search__input { display: inline-block; padding: 15px 30px 22px 0; }
+.search .input { min-width: 185px; }

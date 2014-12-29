@@ -10,8 +10,9 @@
 .main
 	position: relative
 	height: 100%
-	background: url(../img/bg-main.jpg) 45% 0 no-repeat
+	background: url(../img/bg-main.jpg) center center no-repeat
 	background-size: cover
+	background-attachment: fixed
 	overflow: hidden
 	+vertical
 	&__in
@@ -22,7 +23,7 @@
 		margin-bottom: 60px
 	&__txt
 		font-size: 17px
-		color: #FFF
+		color: $white
 		+museo-300
 	&__btn
 		margin-top: 65px
@@ -31,10 +32,82 @@
 		margin: 0 auto 22px
 		min-width: 200px
 
+.menu
+	position: fixed
+	top: 0
+	left: -325px	
+	bottom: 0
+	width: 325px 
+	padding-top: 30px 
+	background: $violet
+	z-index: 2
+	+transition(right 0.3s)
+	&.is-open
+		left: 0
+	&__list
+		margin-top: 40px
+		li
+			&:first-child
+				border-top: 1px solid $white 
+	&__link
+		display: block
+		padding: 20px 0
+		text-transform: uppercase
+		color: $white  
+		border-bottom: 1px solid $white 
+		font-size: 15px 
+		+museo-500
+		&:hover
+			background: $white
+			color: $violet 
+			
+.call
+	color: $white
+	text-align: center
+	font-size: 15px 
+	+museo-500
+		 		
+
+.nav
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	width: 75px
+	min-height: 500px
+	background: #fff
+	z-index: 1
+	&__bottom
+		position: absolute
+		width: 100%
+		bottom: 25%
+	&__link
+		display: block
+		padding: 20px 0 
+	.is-violet
+		background: $violet 	
+
+.cart
+	position: fixed
+	top: 50px 
+	right: 0
+	padding: 15px 20px
+	background: $violet
+	&__in
+		display: inline-block 
+		padding-left: 20px 
+		font-size: 15px 
+		color: $white
+		vertical-align: middle
+		+museo-500
+	.cart_ico
+		display: inline-block 
+
 .search
-	position: absolute
+	position: fixed
 	right: -215px
 	bottom: 0
+	background: $white 
 	font-size: 0
 	+transition(right 0.3s)
 	&.is-open
@@ -42,16 +115,11 @@
 	&__link
 		display: inline-block
 		padding: 22px 20.5px 20px 23px
-		background: #fff
 		+transition(all 0.3s)
 		&.is-clicked
 			right: 100%
 	&__input
 		display: inline-block
 		padding: 15px 30px 22px 0
-		background: #FFF
 	.input
 		min-width: 185px
-
-.hohoho
-	background: red
