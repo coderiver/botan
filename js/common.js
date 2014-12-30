@@ -15,9 +15,19 @@ head.ready(function() {
 	//     scrollFixedElements()
 	// });
 
-	$('.js-slide').click(function(event) {
-		$(this).toggleClass('is-clicked');
-		$(this).closest('.js-show').toggleClass('is-open');
-		return false;
+	function toggleSlide(targetId, slideId) {
+		$(targetId).click(function(event) {
+			$(this).toggleClass('is-clicked');
+			$(slideId).toggleClass('is-open');
+			return false;
+		});
+	}
+
+	toggleSlide('#target1', '#slide1');
+	toggleSlide('#target2', '#slide2');
+
+
+	$('.js-close').click(function(event) {
+		$(this).closest('.js-show').removeClass('is-open');
 	});
 });

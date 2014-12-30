@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="nav">
-			<div class="menu js-show is-open">
+			<div class="menu js-show" id="slide2">
 				<a href="#"><img src="img/logo2.png" alt="Botanica"></a>
 				<ul class="menu__list">
 					<li><a class="menu__link" href="#">About</a></li>
@@ -34,11 +34,12 @@
 				</ul>
 				<div class="call">
 					<i class="call_ico-white icon"></i>
-					<p>1.866.555.5555</p>
+					<p class="call__txt">1.866.555.5555</p>
 				</div>
+				<a href="#" class="close js-close"><i class="close_ico icon"></i></a>
 			</div>
 			<div class="nav__top">
-				<a href="#" class="nav__link is-violet js-slide"><i class="menu_ico icon"></i></a>
+				<a href="#" class="nav__link is-violet js-slide" id="target2"><i class="menu_ico icon"></i></a>
 				<a href="#" class="nav__link"><i class="logo_ico icon"></i></a>
 			</div>
 			<div class="nav__bottom">
@@ -49,13 +50,14 @@
 			<i class="cart_ico icon"></i>
 			<span class="cart__in">0 items in cart</span>
 		</a>
-		<div class="search js-show">
-			<a href="#" class="search__link js-slide"><i class="search_ico icon"></i></a>
+		<div class="search js-show" id="slide1">
+			<a href="#" class="search__link js-slide" id="target1"><i class="search_ico icon"></i></a>
 			<div class="search__input"><input class="input" type="text"></div>
 		</div>
 	</div>
 </div>
 <!-- END out-->
+<div class="overlay js-overlay"></div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

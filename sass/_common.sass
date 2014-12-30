@@ -66,6 +66,16 @@ body
 .onright
 	float: right
 
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0, 0.5)
+	z-index: 1
+
 a
 	-webkit-tap-highlight-color: transparent
 	text-decoration: none
@@ -81,7 +91,7 @@ $violet: #8a84bc
 =museo-300
 	font-family: "Museo-300", Arial, sans-serif
 =museo-500
-	font-family: "Museo-500", Arial, sans-serif	
+	font-family: "Museo-500", Arial, sans-serif
 
 // buttons, icons, etc.
 .btn
@@ -90,7 +100,7 @@ $violet: #8a84bc
 	text-transform: uppercase
 	font-size: 16px
 	color: $white
-	background: $violet 
+	background: $violet
 	box-sizing: border-box
 	letter-spacing: 1.2px
 	-webkit-tap-highlight-color: transparent
@@ -113,15 +123,17 @@ $violet: #8a84bc
 .search_ico
 	+s(search)
 .cart_ico
-	+s(cart)	
+	+s(cart)
 .menu_ico
 	+s(menu)
 .logo_ico
-	+s(logo)	
+	+s(logo)
 .call_ico
 	+s(call)
 .call_ico-white
-	+s(call2)			
+	+s(call2)
+.close_ico
+	+s(close)
 
 
 
