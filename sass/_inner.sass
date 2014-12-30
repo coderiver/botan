@@ -1,0 +1,163 @@
+//inner pages
+.content
+	margin: 0 auto
+	padding: 142px 20px 0
+	color: #a7a9ac
+	box-sizing: border-box
+	+museo-300
+	&.s-width
+		max-width: 1024px
+	&__wrap
+		+clr	
+	&__ttl
+		margin-bottom: 100px
+		color: $violet
+		font-size: 60px
+	&__img
+		width: 242px
+		height: 215px
+		+vertical
+		text-align: left
+		img
+			max-width: 242px
+			max-height: 230px
+	&__bl
+		+clr
+		.table
+			width: 240px
+			font-size: 13px
+			letter-spacing: 1.1px
+			td
+				width: 50% 
+				padding: 2px 0
+	&__name
+		text-align: right
+		font-size: 17px
+		color: $violet
+	&__list
+		padding: 10px 0
+		text-align: right
+		font-size: 13px
+		
+		&.is-violet
+			color: $violet
+		li
+			padding: 2px 0
+			letter-spacing: 1px 	
+	&__btn
+		margin-top: 50px 
+		+clr
+		.btn
+			display: block
+			width: 200px
+			border-radius: 3px
+			&:first-child
+				margin-bottom: 15px
+	&__input
+		margin-right: 25px
+		font-size: 17px
+		text-transform: uppercase
+		color: $violet
+		letter-spacing: 1.2px
+		.input
+			width: 115px
+			height: 50px
+			margin-left: 10px
+			padding: 0 15px
+			font-size: 17px
+			text-align: center
+			border: 1px solid #dedfe0
+			box-sizing: border-box
+	&__info
+		margin-top: 45px
+		font-size: 16px
+		letter-spacing: 1.1px
+		.info__ttl
+			margin-bottom: 35px 
+			font-size: 17px
+			color: $violet
+			text-transform: uppercase
+		.info__txt
+			margin-bottom: 45px 	
+		.table
+			margin-bottom: 35px
+			border-collapse: collapse
+			letter-spacing: 0.5px
+			td
+				padding: 8.5px 15px
+				border: 1px solid #a7a9ac
+				&:first-child
+					width: 21%
+					color: $violet
+	+r(768)
+		&__bl
+			float: none
+			.table
+				margin: 0 auto 40px
+				text-align: center	
+		&__name,
+		&__list
+			text-align: center	
+		&__ttl
+			text-align: center	
+			font-size: 45px 
+		&__img
+			margin: 0 auto	
+			text-align: center
+		&__input
+			float: none	
+			margin-right: 0 	
+			text-align: center
+		&__info
+			.table
+				td
+					padding: 8.5px 5px	
+		&__btn
+			margin-top: 35px 
+			.btn
+				width: 230px 
+				margin: 20px auto 0
+		.btn__wrap
+			float: none			
+			
+.footer
+	padding: 43px 100px
+	background: $violet
+	font-size: 17px 
+	color: $white
+	letter-spacing: 1.1px
+	+clearsans
+	+clr
+	&__list
+		list-style-type: none 
+		+clr
+	&__item
+		&:after
+			content: "."
+			display: inline-block 
+			padding: 0 15px
+		&:last-child
+			&:after
+				display: none
+		a
+			display: inline-block
+			font-size: 17px 
+			color: $white
+			+clearsans-l
+	+r(1550)
+		&__list
+			float: none
+		&__copyright
+			margin-top: 40px
+	+r(768)		 
+		&__item
+			float: none
+			text-align: center
+			&:after
+				display: none 
+			a
+				margin-bottom: 10px 
+		&__copyright
+			float: none
+			text-align: center
+

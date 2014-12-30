@@ -85,11 +85,13 @@ a
 //colors
 $white: #fff
 $violet: #8e85bf
+$grey: #f1f1f2	
 
 // fonts
 +font(Museo-300, Museo-300)
 +font(Museo-500, Museo-500)
 +font(ClearSans, ClearSans)
++font(ClearSans-Light, ClearSans-Light)
 
 =museo-300
 	font-family: "Museo-300", Georgia, serif
@@ -97,6 +99,8 @@ $violet: #8e85bf
 	font-family: "Museo-500", Georgia, serif
 =clearsans
 	font-family: "ClearSans", Arial, sans-serif	
+=clearsans-l
+	font-family: "ClearSans-Light", Arial, sans-serif	
 
 // buttons, icons, etc.
 .btn
@@ -131,11 +135,15 @@ $violet: #8e85bf
 	+s(cart)
 .menu_ico
 	+s(menu)
+.menu_ico2
+	+s(menu2)	
 .logo_ico
 	+s(logo)
+.logo_ico2
+	+s(logo2)	
 .call_ico
 	+s(call)
-.call_ico-white
+.call_ico2
 	+s(call2)
 .close_ico
 	+s(close)
