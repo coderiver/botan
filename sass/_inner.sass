@@ -7,6 +7,10 @@
 	+museo-300
 	&.s-width
 		max-width: 1024px
+	&.l-width
+		max-width: 1184px
+		font-size: 16px
+		letter-spacing: 1.2px
 	&__wrap
 		+clr	
 	&__ttl
@@ -89,6 +93,29 @@
 				&:first-child
 					width: 21%
 					color: $violet
+	&__item
+		+clr
+		.tbl
+			display: table
+			width: 20% 
+			text-align: right
+			color: $violet 
+			&.is-first
+				width: 40%
+				text-align: left
+			.divider
+				display: block 
+				width: 100% 
+				height: 1px
+				margin-top: 20px 
+				background: #a7a9ac
+				&.is-violet
+					background: $violet 
+					margin-top: 5px 
+			.cell
+				padding: 15px 0
+				&.txt-up
+					text-transform: uppercase				
 	+r(768)
 		&__bl
 			float: none
@@ -119,7 +146,128 @@
 				margin: 20px auto 0
 		.btn__wrap
 			float: none			
-			
+
+.steps
+	padding-bottom: 10px
+	border-bottom: 1px solid $violet
+	font-size: 16px 
+	+clr
+	&__ttl
+		float: left
+		text-transform: uppercase
+		color: $violet
+		+museo-300
+	&__item
+		float: right
+		+museo-500
+		+clr
+		li
+			float: left
+			color: #D1D3D4
+			&:after
+				content: "\003e"
+				padding: 0 10px
+			&:last-child
+				&:after
+					display: none
+			&.is-active
+				color: $violet
+				&:after
+					color: #A7AAAC
+					
+.details
+	position: relative
+	margin-top: 35px
+	+clr
+	&__add
+		position: absolute
+		right: 0
+		&.with-margin
+			margin-bottom: 25px 
+	.is-violet
+		color: $violet
+	a
+		color: $violet
+		text-decoration: none
+		border-bottom: 2px solid $violet
+		+clr					
+
+.tbl__wrap
+	display: table
+	width: 100% 
+	+clr
+
+.tbl
+	&.checkout
+		width: 50%
+		margin-top: 5px
+		&.s-width
+			width: 25% 
+			padding-right: 10%
+			&:last-child
+				padding-right: 0 
+		&.m-width
+			width: 38%
+		&.l-width
+			width: 100% 	
+		&.with-radio
+			.cell
+				p
+					padding-left: 33px	
+		.cell
+			padding: 6px 0
+			vertical-align: top
+			&.m-pad
+				padding: 15px 0
+			a
+				text-transform: uppercase
+				
+.terms
+	margin-top: 40px
+	label
+		display: block
+		margin-bottom: 10px 
+		padding-left: 33px 		
+		
+.total
+	display: table
+	margin-top: 30px
+	width: 32%
+	text-transform: uppercase
+	font-size: 15px
+	letter-spacing: 1.1px
+	&.is-checkout
+		margin-top: 0 
+		text-transform: none
+		border-top: 0
+		.txt-right
+			width: 67% 
+			padding-right: 18%
+		.cell
+			&:first-child
+				color: $violet
+			p
+				padding: 3px 0
+				&:last-child
+					text-transform: uppercase 
+	.row
+		display: table-row
+		&:last-child
+			.cell
+				padding-top: 25px
+	.cell
+		display: table-cell
+		padding: 5px 0
+		&.txt-right
+			text-align: right
+			padding-right: 20%				
+	
+.checkout__btn
+	margin: 20px 0 90px
+	padding-top: 40px 
+	border-top: 1px solid $violet 
+	+clr
+
 .footer
 	padding: 43px 100px
 	background: $violet

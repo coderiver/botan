@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Checkout</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<div class="inner">
+		<div class="content l-width">
+			<p class="content__ttl">Checkout</p>
+			<!--BEGIN STEP 1-->
+			<div class="content__bl with-margin">
+				<div class="steps">
+					<p class="steps__ttl">Step one: delivery</p>
+					<ul class="steps__item">
+						<li class="is-active">Step One: Delivery</li>
+						<li>Step Two: Shipping</li>
+						<li>Step Three: Billing</li>
+						<li>Step Four: Finish</li>
+					</ul>
+				</div>
+				<div class="details">
+					<p class="is-violet">Delivery options</p>
+					<div class="tbl checkout with-radio">
+						<div class="row">
+							<div class="cell">
+								<label class="radio"><input type="radio" name="delivery" value="Standard" checked><span class="radio__mode"></span><p>Standard: In 3-6 working days</p></label>
+							</div>
+							<div class="cell">4.95 CAD</div>
+						</div>
+						<div class="row">
+							<div class="cell">
+								<label class="radio"><input type="radio" name="delivery" value="Express"><span class="radio__mode"></span><p>Express: In 2-3 working days</p></label>
+							</div>
+							<div class="cell">9.95 CAD</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--FINISH STEP 1-->
+			<!--BEGIN STEP 2-->
+			<div class="content__bl">
+				<div class="steps">
+					<p class="steps__ttl">Step two: shipping</p>
+					<ul class="steps__item">
+						<li class="is-passed">Step One: Delivery</li>
+						<li class="is-active">Step Two: Shipping</li>
+						<li>Step Three: Billing</li>
+						<li>Step Four: Finish</li>
+					</ul>
+				</div>
+				<div class="details">
+					<a href="#" class="details__add">add new address</a>					
+					<div class="tbl checkout m-width with-radio onleft">
+						<div class="row">
+							<div class="cell">
+								<label class="radio">
+									<input type="radio" name="shipping" value="Address 1" checked><span class="radio__mode"></span>
+									<p>Address 1</p>
+									<p>822 Richmond Street West</p>
+									<p>Suite 400</p>
+									<p>Toronto, ON</p>
+									<p>M6J 1C9</p>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="tbl checkout m-width with-radio onleft">
+						<div class="row">
+							<div class="cell">
+								<label class="radio">
+									<input type="radio" name="shipping" value="Address 2"><span class="radio__mode"></span>
+									<p>Address 2</p>
+									<p>822 Richmond Street West</p>
+									<p>Suite 400</p>
+									<p>Toronto, ON</p>
+									<p>M6J 1C9</p>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--FINISH STEP 2-->
+			<!--BEGIN STEP 3-->
+			<div class="content__bl">
+				<div class="steps">
+					<p class="steps__ttl">Step three: billing</p>
+					<ul class="steps__item">
+						<li class="is-passed">Step One: Delivery</li>
+						<li class="is-passed">Step Two: Shipping</li>
+						<li class="is-active">Step Three: Billing</li>
+						<li>Step Four: Finish</li>
+					</ul>
+				</div>
+				<div class="details">
+					<a href="#" class="details__add">add new payment</a>
+					<div class="tbl checkout">
+						<div class="row">
+							<div class="cell">
+								<p class="is-pink">Payment Details</p>
+								<p>Visa</p>
+								<p>4520 0240 0090 XXXX</p>
+								<p>08/1</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details">
+					<a href="#" class="details__add">add new address</a>
+					<p class="is-violet">Billing Address</p>			
+					<div class="tbl checkout m-width onleft">
+						<div class="row">
+							<div class="cell">								
+								<p>John Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="tbl checkout m-width onleft">
+						<div class="row">
+							<div class="cell">								
+								<p>Jane Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+				</div>
+				<div class="terms">
+					<label class="check"><input type="checkbox" checked><span class="check__mode"></span>Billing address is the same as shipping address</label>
+					<label class="check"><input type="checkbox"><span class="check__mode"></span>I have read and accept the terms of purchase and privacy policy</label>
+				</div>
+			</div>
+			<!--FINISH STEP 3-->
+			<!--BEGIN STEP 4-->
+			<div class="content__bl">
+				<div class="steps">
+					<p class="steps__ttl">Step four: finish</p>
+					<ul class="steps__item">
+						<li class="is-passed">Step One: Delivery</li>
+						<li class="is-passed">Step Two: Shipping</li>
+						<li class="is-passed">Step Three: Billing</li>
+						<li class="is-active">Step Four: Finish</li>
+					</ul>
+				</div>
+				<div class="details">
+					<div class="tbl checkout">
+						<div class="row">
+							<div class="cell">
+								<p class="is-pink">Payment Details</p>
+								<p>Visa</p>
+								<p>4520 0240 0090 XXXX</p>
+								<p>08/1</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details">				
+					<div class="tbl checkout m-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Shipping Address</p>								
+								<p>John Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="tbl checkout s-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Billing Address</p>									
+								<p>Jane Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="tbl checkout s-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Payment Details</p>
+								<p>Visa</p>
+								<p>4520 0240 0090 XXXX</p>
+								<p>08/1</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell">&nbsp;</div>
+						</div>
+						<div class="row">
+							<div class="cell">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="tbl__wrap">
+						<div class="tbl is-first onleft">
+							<div class="row">
+								<p class="cell txt-up">Product<span class="divider is-violet"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">RESTYLANE® LIPP™ 1ml<span class="divider"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">RESTYLANE® LIPP™ 0.5ml<span class="divider"></span></p>
+							</div>
+						</div>
+						<div class="tbl onleft">
+							<div class="row">
+								<p class="cell">Price<span class="divider is-violet"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">$219.00<span class="divider"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">$189.00<span class="divider"></span></p>
+							</div>
+						</div>
+						<div class="tbl onleft">
+							<div class="row">
+								<p class="cell txt-right">Quantity<span class="divider is-violet"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell txt-right">11<span class="divider"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell txt-right">1<span class="divider"></span></p>
+							</div>
+						</div>
+						<div class="tbl onleft">
+							<div class="row">
+								<p class="cell">Amount<span class="divider is-violet"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">2409.00 CAD<span class="divider"></span></p>
+							</div>
+							<div class="row">
+								<p class="cell">189.00 CAD<span class="divider"></span></p>
+							</div>
+						</div>
+					</div>					
+					<div class="total is-checkout onright">
+						<div class="row">
+							<div class="cell txt-right">
+								<p>Total Products</p>
+								<p>Discount</p>
+								<p>Standard Shipping</p>
+								<p>Subtotal</p>
+							</div>
+							<div class="cell">
+								<p>2598.00 CAD</p>
+								<p>0.00 CAD</p>
+								<p>4.95 CAD</p>
+								<p>2603.95 CAD</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell txt-right">
+								<p>HST/TVH 13.00%</p>
+								<p>HST/TVH 12.96%</p>
+								<p>Total Tax</p>
+								<p>Total</p>
+							</div>
+							<div class="cell">
+								<p>338.51 CAD</p>
+								<p>337.47 CAD</p>
+								<p>675.98 CAD</p>
+								<p>3279.93 CAD</p>
+							</div>
+						</div>
+					</div>
+				</div>				
+				<div class="checkout__btn">
+					<button class="btn onleft" type="button">Back to cart</button>
+					<button class="btn onright" type="submit">Complete order</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav is-violet">
+		<div class="nav__top">
+			<a href="#" class="nav__link is-menu is-grey js-menu"><i class="menu_ico2 icon"></i></a>
+			<a href="#" class="nav__link"><i class="logo_ico2 icon"></i></a>
+		</div>
+		<div class="nav__bottom">
+			<a href="#" class="nav__link"><i class="call_ico2 icon"></i></a>
+			<a href="#" class="nav__link cart">
+				<i class="cart_ico icon"></i>
+				<span class="cart__in">0 items in cart</span>
+			</a>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menu__in">
+			<a href="#"><img src="img/logo2.png" alt="Botanica"></a>
+			<ul class="menu__list">
+				<li><a class="menu__link" href="#">About</a></li>
+				<li><a class="menu__link" href="#">Products</a></li>
+				<li><a class="menu__link" href="#">FAQ</a></li>
+				<li><a class="menu__link" href="#">Contact</a></li>
+				<li><a class="menu__link" href="#">VIEW MY CART</a></li>
+			</ul>
+			<div class="call">
+				<i class="call_ico2 icon"></i>
+				<p class="call__txt">1.866.555.5555</p>
+			</div>
+			<a href="#" class="menu__close js-close"><i class="close_ico icon"></i></a>
+		</div>				
+		<a href="#" class="close js-close"><i class="close_ico icon"></i></a>
+	</div>
+	<a href="#" class="cart">
+		<i class="cart_ico icon"></i>
+		<span class="cart__in">0 items in cart</span>
+	</a>
+	<div class="search js-show" id="slide1">
+		<a href="#" class="search__link js-slide" id="target1"><i class="search_ico icon"></i></a>
+		<div class="search__input"><input class="input" type="text"></div>
+	</div>
+	<footer class="footer">
+		<div class="footer__list onleft">
+			<li class="footer__item onleft"><a href="#">Privacy Policy</a></li>
+			<li class="footer__item onleft"><a href="#">Security</a></li>
+			<li class="footer__item onleft"><a href="#">Order Status</a></li>
+			<li class="footer__item onleft"><a href="#">Terms of Service</a></li>
+			<li class="footer__item onleft"><a href="#">FAQ</a></li>
+			<li class="footer__item onleft"><a href="#">Sitemap</a></li>
+			<li class="footer__item onleft"><a href="#">Sitemap XML</a></li>
+			<li class="footer__item onleft"><a href="#">URL list</a></li>
+			<li class="footer__item onleft"><a href="#">Contact Us</a></li>
+		</div>
+		<p class="footer__copyright onright">© 2014 Medica Depot</p>
+	</footer>
+</div>
+<!-- END out-->
+<div class="overlay js-overlay"></div>
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

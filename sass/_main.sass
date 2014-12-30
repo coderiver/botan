@@ -153,6 +153,11 @@
 	&__link
 		display: block
 		padding: 20px 0
+		&.cart
+			display: none 
+			position: static
+			margin: 0 
+			padding: 5px 10px
 	.is-violet
 		background: $violet	
 	.is-grey
@@ -170,11 +175,15 @@
 			width: auto
 		&__link
 			display: inline-block 
-			margin: 0 10px	
-			padding: 2px 0
+			padding: 5px 10px
 		.is-menu
-			padding: 20px 15px
+			padding: 21.5px 15px
 			margin-left: 0	
+	+r(480)
+		width: 100% 
+		&__link
+			&.cart
+				display: inline-block 		
 			
 .cart
 	position: fixed
@@ -196,6 +205,8 @@
 		padding: 3.5px 10px
 		&__in
 			display: none 	
+	+r(480)
+		display: none 		
 
 .search
 	position: fixed

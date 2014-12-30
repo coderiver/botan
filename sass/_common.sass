@@ -149,105 +149,85 @@ $grey: #f1f1f2
 	+s(close)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//checkboxes & radiobuttons
+.radio
+	display: block 
+	position: relative
+	input
+		position: absolute
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			+ .radio__mode
+				&:after
+					display: block
+
+.radio__mode
+	position: absolute
+	top: -3px
+	left: 0
+	width: 20px
+	height: 20px
+	border: 1px solid #bcbdc0
+	z-index: 1
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 10px
+		height: 10px
+		margin: -5px 0 0 -5px
+		background: $violet
+		z-index: 2
+
+.check
+	position: relative
+	input
+		position: absolute
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			+ .check__mode
+				background: $violet
+				border-color: $violet 
+				&:after
+					display: block
+
+.check__mode
+	position: absolute
+	top: -3px
+	left: 0
+	width: 20px
+	height: 20px
+	border: 1px solid #bcbdc0
+	z-index: 1
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -5px 0 0 -5px
+		z-index: 2
+		+s(checked)
+
+
+//table for checkout
+.tbl
+	display: table
+	width: 100%
+	margin-bottom: 35px 
+	.row
+		display: table-row
+	.cell
+		display: table-cell
+		padding: 2px 0
+		vertical-align: middle
+		&.txt-right
+			text-align: right
 
 
