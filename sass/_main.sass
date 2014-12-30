@@ -10,14 +10,17 @@
 .main
 	position: relative
 	height: 100%
-	background: url(../img/bg-main.jpg) center center no-repeat
+	background: url(../img/bg-main.jpg) top center no-repeat
 	background-size: cover
 	background-attachment: fixed
 	overflow: hidden
 	+vertical
+	&.another-bg
+		background: url(../img/bg-welcome.jpg) top center no-repeat
 	&__in
 		display: inline-block
 		vertical-align: middle
+		box-sizing: border-box
 	&__logo
 		display: block
 		margin-bottom: 60px
@@ -25,26 +28,63 @@
 		font-size: 17px
 		color: $white
 		+museo-300
+	&__ttl
+		text-transform: uppercase
+		font-size: 35px 
+		color: $white
+		+museo-300	
 	&__btn
 		margin-top: 65px
+	.main__wrap
+		width: 310px
+		margin-top: 35px
+		box-sizing: border-box
+		.input
+			margin-bottom: 12px 
+			padding: 20px 15px
+			font-size: 16px
+			+placeholder
+				color: #bcbec0
+				letter-spacing: 1px 
+				+clearsans
+		.btn
+			width: 310px
+			margin-top: 30px 	
 	.btn
 		display: block
 		margin: 0 auto 22px
 		min-width: 200px
+	+r(1100)
+		min-height: 100%
+		height: auto	
+		&__in
+			padding: 100px 5% 0
+	+r(480)
+		.main__wrap
+			width: 100% 
+			.btn
+				width: 100% 
+		
 
 .menu
 	position: fixed
-	top: 0
 	left: -405px
+	top: 0
 	bottom: 0
 	width: 325px
-	padding-top: 30px
 	background: $violet
-	overflow: auto
 	z-index: 2
-	+transition(left 0.3s)
 	&.is-open
+		left: 0	
+		+transition(left 0.3s)		
+	&__in
+		position: absolute
+		top: 0
 		left: 0
+		right: 0
+		bottom: 0
+		padding-top: 30px
+		overflow: auto
 	&__list
 		margin-top: 40px
 		li
@@ -54,23 +94,37 @@
 		display: block
 		padding: 20px 0
 		text-transform: uppercase
-		color: $white
-		border-bottom: 1px solid $white
 		font-size: 15px
+		color: $white
+		letter-spacing: 1.2px 
+		border-bottom: 1px solid $white		
 		+museo-500
 		&:hover
 			background: $white
 			color: $violet
-
+	&__close
+		position: absolute
+		display: none
+		top: 0
+		right: 0	
+		padding: 15px 	
+		background: #f1f1f2	
+	+r(480)
+		width: 100%
+		left: -100%
+		&__close			
+			display: block 
+			
+				
 .call
-	margin-top: 34%
+	margin: 34% 0 10%
 	color: $white
 	text-align: center
 	&__txt
 		margin-top: 23px
 		font-size: 16px
 		letter-spacing: 1.3px
-		+museo-500
+		+museo-500	
 
 .close
 	position: absolute
@@ -78,6 +132,8 @@
 	left: 100%
 	padding: 23px 25px
 	background: #f1f1f2
+	+r(480)
+		display: none 
 
 .nav
 	position: fixed
@@ -85,7 +141,6 @@
 	bottom: 0
 	left: 0
 	width: 75px
-	min-height: 500px
 	background: #fff
 	z-index: 1
 	&__bottom
@@ -97,7 +152,25 @@
 		padding: 20px 0
 	.is-violet
 		background: $violet
-
+	+r(1100)
+		width: auto 
+		bottom: auto
+		&:after
+			+clr
+		&__top
+			float: left
+		&__bottom
+			position: static
+			float: left			
+			width: auto
+		&__link
+			display: inline-block 
+			margin: 0 10px	
+			padding: 2px 0
+		.is-violet
+			padding: 20px 15px
+			margin-left: 0	
+			
 .cart
 	position: fixed
 	top: 50px
@@ -113,6 +186,11 @@
 		+museo-500
 	.cart_ico
 		display: inline-block
+	+r(1100)
+		top: 0
+		padding: 4px 10px
+		&__in
+			display: none 	
 
 .search
 	position: fixed
@@ -134,3 +212,20 @@
 		padding: 15px 30px 22px 0
 	.input
 		min-width: 185px
+	+r(1100)
+		&__link
+			padding: 10px 15px 15px 20px
+		&__input
+			padding: 10px 30px 15px 0
+
+.forgotten
+	margin-top: 35px 
+	text-align: center
+	text-transform: uppercase
+	font-size: 12px 
+	&__link
+		display: block 
+		margin-bottom: 20px 
+		letter-spacing: 1.2px 
+		color: #FFF	
+		+museo-300 

@@ -55,6 +55,8 @@ body
 	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
+	&.menu-opened
+		overflow: hidden
 
 .out
 	height: 100%
@@ -82,16 +84,19 @@ a
 
 //colors
 $white: #fff
-$violet: #8a84bc
+$violet: #8e85bf
 
 // fonts
 +font(Museo-300, Museo-300)
 +font(Museo-500, Museo-500)
++font(ClearSans, ClearSans)
 
 =museo-300
-	font-family: "Museo-300", Arial, sans-serif
+	font-family: "Museo-300", Georgia, serif
 =museo-500
-	font-family: "Museo-500", Arial, sans-serif
+	font-family: "Museo-500", Georgia, serif
+=clearsans
+	font-family: "ClearSans", Arial, sans-serif	
 
 // buttons, icons, etc.
 .btn

@@ -24,10 +24,19 @@ head.ready(function() {
 	}
 
 	toggleSlide('#target1', '#slide1');
-	toggleSlide('#target2', '#slide2');
 
+	//menu
+	$('.js-menu').click(function() {
+		$('body').addClass('menu-opened');
+		$('.menu').addClass('is-open');
+		$('.js-overlay').css('display', 'block');
+		return false;
+	});
 
-	$('.js-close').click(function(event) {
-		$(this).closest('.js-show').removeClass('is-open');
+	$('.js-close').click(function() {
+		$('body').removeClass('menu-opened');
+		$('.menu').removeClass('is-open');
+		$('.js-overlay').css('display', 'none');
+		return false;
 	});
 });
