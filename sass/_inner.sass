@@ -1,18 +1,22 @@
 //inner pages
 .content
 	margin: 0 auto
-	padding: 142px 20px 0
+	padding: 140px 20px 0
 	color: #a7a9ac
 	box-sizing: border-box
 	+museo-300
 	&.s-width
 		max-width: 1024px
+	&.m-width
+		max-width: 1122px
+		font-size: 15px
+		+museo-300
 	&.l-width
 		max-width: 1184px
 		font-size: 16px
 		letter-spacing: 1.2px
 	&__wrap
-		+clr	
+		+clr
 	&__ttl
 		margin-bottom: 100px
 		color: $violet
@@ -32,7 +36,7 @@
 			font-size: 13px
 			letter-spacing: 1.1px
 			td
-				width: 50% 
+				width: 50%
 				padding: 2px 0
 	&__name
 		text-align: right
@@ -42,21 +46,17 @@
 		padding: 10px 0
 		text-align: right
 		font-size: 13px
-		
 		&.is-violet
 			color: $violet
 		li
 			padding: 2px 0
-			letter-spacing: 1px 	
+			letter-spacing: 1px
 	&__btn
-		margin-top: 50px 
+		margin: 50px 0 40px
 		+clr
 		.btn
 			display: block
-			width: 200px
-			border-radius: 3px
-			&:first-child
-				margin-bottom: 15px
+			min-width: 200px
 	&__input
 		margin-right: 25px
 		font-size: 17px
@@ -77,12 +77,12 @@
 		font-size: 16px
 		letter-spacing: 1.1px
 		.info__ttl
-			margin-bottom: 35px 
+			margin-bottom: 35px
 			font-size: 17px
 			color: $violet
 			text-transform: uppercase
 		.info__txt
-			margin-bottom: 45px 	
+			margin-bottom: 45px
 		.table
 			margin-bottom: 35px
 			border-collapse: collapse
@@ -95,70 +95,73 @@
 					color: $violet
 	&__item
 		+clr
-		.tbl
-			display: table
-			width: 20% 
-			text-align: right
-			color: $violet 
-			&.is-first
-				width: 40%
+		.mycart
+			.table
+				font-size: 16px
 				text-align: left
-			.divider
-				display: block 
-				width: 100% 
-				height: 1px
-				margin-top: 20px 
-				background: #a7a9ac
-				&.is-violet
-					background: $violet 
-					margin-top: 5px 
-			.cell
-				padding: 15px 0
-				&.txt-up
-					text-transform: uppercase				
+				tr
+					border-bottom: 1px solid #a7a9ac
+					&:first-child
+						border-color: $violet
+						td
+							padding: 5px 0 10px
+				td
+					padding: 30px 0
+					&.txt-right
+						padding-right: 0
 	+r(768)
 		&__bl
 			float: none
 			.table
 				margin: 0 auto 40px
-				text-align: center	
+				text-align: center
 		&__name,
 		&__list
-			text-align: center	
+			text-align: center
 		&__ttl
-			text-align: center	
-			font-size: 45px 
+			text-align: center
+			font-size: 45px
+			margin-bottom: 50px
 		&__img
-			margin: 0 auto	
+			margin: 0 auto
 			text-align: center
 		&__input
-			float: none	
-			margin-right: 0 	
+			float: none
+			margin-right: 0
 			text-align: center
 		&__info
 			.table
 				td
-					padding: 8.5px 5px	
+					padding: 8.5px 5px
 		&__btn
-			margin-top: 35px 
+			margin-top: 35px
 			.btn
-				width: 230px 
+				width: 230px
 				margin: 20px auto 0
+		&__item
+			.mycart
+				.table
+					font-size: 14px
 		.btn__wrap
-			float: none			
+			float: none
+	+r(600)
+		&__btn
+			&.in-cart
+				.btn
+					float: none
+					margin: 0 auto 15px
 
+//checkout blocks
 .steps
 	padding-bottom: 10px
 	border-bottom: 1px solid $violet
-	font-size: 16px 
+	font-size: 16px
 	+clr
 	&__ttl
-		float: left
 		text-transform: uppercase
 		color: $violet
 		+museo-300
 	&__item
-		float: right
 		+museo-500
 		+clr
 		li
@@ -174,7 +177,19 @@
 				color: $violet
 				&:after
 					color: #A7AAAC
-					
+	+r(1000)
+		&__ttl,
+		&__item
+			float: none
+		&__ttl
+			margin-bottom: 10px
+	+r(768)
+		margin-top: 15px
+	+r(480)
+		&__item
+			li
+				float: none
+
 .details
 	position: relative
 	margin-top: 35px
@@ -182,19 +197,25 @@
 	&__add
 		position: absolute
 		right: 0
+		span
+			padding-bottom: 2px
+			border-bottom: 2px solid $violet
 		&.with-margin
-			margin-bottom: 25px 
+			margin-bottom: 25px
 	.is-violet
 		color: $violet
-	a
-		color: $violet
-		text-decoration: none
-		border-bottom: 2px solid $violet
-		+clr					
+	+r(1000)
+		font-size: 14px
+	+r(768)
+		&__add
+			position: static
+			display: block
+			margin-bottom: 20px
+			+clr
+		.is-violet
+			padding-left: 17%
 
 .tbl__wrap
-	display: table
-	width: 100% 
 	+clr
 
 .tbl
@@ -202,18 +223,16 @@
 		width: 50%
 		margin-top: 5px
 		&.s-width
-			width: 25% 
+			width: 25%
 			padding-right: 10%
 			&:last-child
-				padding-right: 0 
+				padding-right: 0
 		&.m-width
 			width: 38%
-		&.l-width
-			width: 100% 	
 		&.with-radio
 			.cell
 				p
-					padding-left: 33px	
+					padding-left: 33px
 		.cell
 			padding: 6px 0
 			vertical-align: top
@@ -221,90 +240,167 @@
 				padding: 15px 0
 			a
 				text-transform: uppercase
-				
+				border-bottom: 2px solid $violet
+		+r(768)
+			width: 65%
+			float: none
+			min-width: 185px
+			margin: 5px auto 15px
+			font-size: 14px
+			.cell
+				padding-right: 10px
+			&.with-radio
+				min-width: 250px
+			&.m-width
+				width: 65%
+			&.s-width
+				width: 65%
+				padding-right: 0
+
 .terms
-	margin-top: 40px
+	margin: 40px 0
 	label
 		display: block
-		margin-bottom: 10px 
-		padding-left: 33px 		
-		
+		margin-bottom: 10px
+		padding-left: 33px
+	+r(768)
+		font-size: 14px
+
 .total
 	display: table
-	margin-top: 30px
-	width: 32%
+	width: 35%
+	margin-top: 10px
 	text-transform: uppercase
 	font-size: 15px
+	color: $violet
 	letter-spacing: 1.1px
 	&.is-checkout
-		margin-top: 0 
+		min-width: 300px
 		text-transform: none
-		border-top: 0
-		.txt-right
-			width: 67% 
-			padding-right: 18%
 		.cell
-			&:first-child
-				color: $violet
-			p
-				padding: 3px 0
-				&:last-child
-					text-transform: uppercase 
+			&:last-child
+				color: #a7aaac
+			&.txt-right
+				padding-right: 0
 	.row
 		display: table-row
-		&:last-child
-			.cell
-				padding-top: 25px
 	.cell
 		display: table-cell
-		padding: 5px 0
+		padding: 10px 0
+		p
+			padding: 5px 0
 		&.txt-right
+			width: 57%
+			padding-right: 20%
 			text-align: right
-			padding-right: 20%				
-	
+	.is-bold
+		+museo-500
+	+r(768)
+		min-width: 250px
+		float: none
+		font-size: 14px
+		margin: 30px auto 0
+	+r(480)
+		&.is-checkout
+			.cell
+				&.txt-right
+					text-align: inherit
+
 .checkout__btn
 	margin: 20px 0 90px
-	padding-top: 40px 
-	border-top: 1px solid $violet 
+	padding-top: 40px
+	border-top: 1px solid $violet
+	+clr
+	.btn
+		min-width: 230px
+	+r(600)
+		.btn
+			float: none
+			display: block
+			margin: 0 auto 15px
+
+// my cart
+.mycart__wrap
 	+clr
 
+.mycart
+	height: auto
+	overflow-x: auto
+	&__ttl
+		margin-bottom: 30px
+		color: $violet
+		text-transform: uppercase
+		+museo-500
+	.table
+		width: 100%
+		min-width: 600px
+		letter-spacing: 1.1px
+		tr
+			&:first-child
+				td
+					+museo-500
+		td
+			width: 15%
+			padding: 20px 0
+			color: $violet
+			&:first-child
+				width: 40%
+			&.txt-right
+				padding-right: 5%
+		.icon
+			&:first-child
+				margin-right: 5px
+	.jspVerticalBar
+		width: 0
+	+r(768)
+		font-size: 13px
+		overflow: hidden
+		.table
+			td
+				&:first-child
+					width: 35%
+	+r(600)
+		max-width: 600px
+
+// inner footer
 .footer
 	padding: 43px 100px
 	background: $violet
-	font-size: 17px 
+	font-size: 17px
 	color: $white
 	letter-spacing: 1.1px
 	+clearsans
 	+clr
 	&__list
-		list-style-type: none 
+		list-style-type: none
 		+clr
 	&__item
 		&:after
 			content: "."
-			display: inline-block 
+			display: inline-block
 			padding: 0 15px
 		&:last-child
 			&:after
 				display: none
 		a
 			display: inline-block
-			font-size: 17px 
+			font-size: 17px
 			color: $white
 			+clearsans-l
 	+r(1550)
+		padding: 25px 100px 15px
 		&__list
 			float: none
 		&__copyright
 			margin-top: 40px
-	+r(768)		 
+	+r(768)
 		&__item
 			float: none
 			text-align: center
 			&:after
-				display: none 
+				display: none
 			a
-				margin-bottom: 10px 
+				margin-bottom: 10px
 		&__copyright
 			float: none
 			text-align: center

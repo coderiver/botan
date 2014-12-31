@@ -39,4 +39,16 @@ head.ready(function() {
 		$('.js-overlay').css('display', 'none');
 		return false;
 	});
+
+	//jscrollpane
+	$(function()
+	{
+		$('.js-scroll').jScrollPane();
+	});
+
+	$(window).resize(function(event) {
+		$('.js-scroll').jScrollPane();
+	});
+
+
 });

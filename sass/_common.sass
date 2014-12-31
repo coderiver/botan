@@ -85,7 +85,7 @@ a
 //colors
 $white: #fff
 $violet: #8e85bf
-$grey: #f1f1f2	
+$grey: #f1f1f2
 
 // fonts
 +font(Museo-300, Museo-300)
@@ -98,9 +98,9 @@ $grey: #f1f1f2
 =museo-500
 	font-family: "Museo-500", Georgia, serif
 =clearsans
-	font-family: "ClearSans", Arial, sans-serif	
+	font-family: "ClearSans", Arial, sans-serif
 =clearsans-l
-	font-family: "ClearSans-Light", Arial, sans-serif	
+	font-family: "ClearSans-Light", Arial, sans-serif
 
 // buttons, icons, etc.
 .btn
@@ -111,6 +111,7 @@ $grey: #f1f1f2
 	color: $white
 	background: $violet
 	box-sizing: border-box
+	border-radius: 3px
 	letter-spacing: 1.2px
 	-webkit-tap-highlight-color: transparent
 	+museo-300
@@ -136,22 +137,26 @@ $grey: #f1f1f2
 .menu_ico
 	+s(menu)
 .menu_ico2
-	+s(menu2)	
+	+s(menu2)
 .logo_ico
 	+s(logo)
 .logo_ico2
-	+s(logo2)	
+	+s(logo2)
 .call_ico
 	+s(call)
 .call_ico2
 	+s(call2)
 .close_ico
 	+s(close)
+.trash_ico
+	+s(trash)
+.change_ico
+	+s(change)
 
 
 //checkboxes & radiobuttons
 .radio
-	display: block 
+	display: block
 	position: relative
 	input
 		position: absolute
@@ -193,7 +198,7 @@ $grey: #f1f1f2
 		&:checked
 			+ .check__mode
 				background: $violet
-				border-color: $violet 
+				border-color: $violet
 				&:after
 					display: block
 
@@ -220,7 +225,7 @@ $grey: #f1f1f2
 .tbl
 	display: table
 	width: 100%
-	margin-bottom: 35px 
+	margin-bottom: 35px
 	.row
 		display: table-row
 	.cell
@@ -230,4 +235,15 @@ $grey: #f1f1f2
 		&.txt-right
 			text-align: right
 
+//table
+.table
+	&__span
+		display: inline-block
+		width: 95%
+		padding-bottom: 10px
+		border-bottom: 1px solid $violet
+	.txt-up
+		text-transform: uppercase
+	.txt-right
+		text-align: right
 

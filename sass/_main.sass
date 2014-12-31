@@ -30,9 +30,9 @@
 		+museo-300
 	&__ttl
 		text-transform: uppercase
-		font-size: 35px 
+		font-size: 35px
 		color: $white
-		+museo-300	
+		+museo-300
 	&__btn
 		margin-top: 65px
 	.main__wrap
@@ -40,31 +40,33 @@
 		margin-top: 35px
 		box-sizing: border-box
 		.input
-			margin-bottom: 12px 
+			margin-bottom: 12px
 			padding: 20px 15px
 			font-size: 16px
 			+placeholder
 				color: #bcbec0
-				letter-spacing: 1px 
+				letter-spacing: 1px
 				+clearsans
 		.btn
-			width: 310px
-			margin-top: 30px 	
+			min-width: 310px
+			margin-top: 30px
 	.btn
 		display: block
 		margin: 0 auto 22px
 		min-width: 200px
-	+r(1100)
+	+r(1360)
 		min-height: 100%
-		height: auto	
+		height: auto
 		&__in
 			padding: 100px 5% 0
 	+r(480)
 		.main__wrap
-			width: 100% 
+			width: 100%
 			.btn
-				width: 100% 
-		
+				width: 100%
+		.btn
+			width: 100%
+
 .menu
 	position: fixed
 	left: -405px
@@ -75,8 +77,8 @@
 	background: $violet
 	z-index: 2
 	&.is-open
-		left: 0	
-		+transition(left 0.3s)		
+		left: 0
+		+transition(left 0.3s)
 	&__in
 		position: absolute
 		top: 0
@@ -96,8 +98,8 @@
 		text-transform: uppercase
 		font-size: 15px
 		color: $white
-		letter-spacing: 1.2px 
-		border-bottom: 1px solid $white		
+		letter-spacing: 1.2px
+		border-bottom: 1px solid $white
 		+museo-500
 		&:hover
 			background: $white
@@ -106,16 +108,16 @@
 		position: absolute
 		display: none
 		top: 0
-		right: 0	
-		padding: 15px 	
+		right: 0
+		padding: 15px
 		background: $grey
 	+r(480)
 		width: 100%
 		left: -100%
-		&__close			
-			display: block 
-			
-				
+		&__close
+			display: block
+
+
 .call
 	margin: 34% 0 10%
 	color: $white
@@ -124,7 +126,7 @@
 		margin-top: 23px
 		font-size: 16px
 		letter-spacing: 1.3px
-		+museo-500	
+		+museo-500
 
 .close
 	position: absolute
@@ -133,7 +135,7 @@
 	padding: 23px 25px
 	background: #f1f1f2
 	+r(480)
-		display: none 
+		display: none
 
 .nav
 	position: fixed
@@ -143,7 +145,7 @@
 	width: 75px
 	text-align: center
 	background: #fff
-	z-index: 1	
+	z-index: 1
 	&.is-violet
 		background: $violet
 	&__bottom
@@ -154,16 +156,16 @@
 		display: block
 		padding: 20px 0
 		&.cart
-			display: none 
+			display: none
 			position: static
-			margin: 0 
+			margin: 0
 			padding: 5px 10px
 	.is-violet
-		background: $violet	
+		background: $violet
 	.is-grey
-		background: $grey	
-	+r(1100)
-		width: auto 
+		background: $grey
+	+r(1360)
+		width: auto
 		bottom: auto
 		&:after
 			+clr
@@ -171,20 +173,20 @@
 			float: left
 		&__bottom
 			position: static
-			float: left			
+			float: left
 			width: auto
 		&__link
-			display: inline-block 
+			display: inline-block
 			padding: 5px 10px
 		.is-menu
 			padding: 21.5px 15px
-			margin-left: 0	
+			margin-left: 0
 	+r(480)
-		width: 100% 
+		width: 100%
 		&__link
 			&.cart
-				display: inline-block 		
-			
+				display: inline-block
+
 .cart
 	position: fixed
 	top: 50px
@@ -200,13 +202,13 @@
 		+museo-500
 	.cart_ico
 		display: inline-block
-	+r(1100)
+	+r(1360)
 		top: 0
 		padding: 3.5px 10px
 		&__in
-			display: none 	
+			display: none
 	+r(480)
-		display: none 		
+		display: none
 
 .search
 	position: fixed
@@ -228,20 +230,20 @@
 		padding: 15px 30px 22px 0
 	.input
 		min-width: 185px
-	+r(1100)
+	+r(1360)
 		&__link
 			padding: 10px 15px 15px 20px
 		&__input
 			padding: 10px 30px 15px 0
 
 .forgotten
-	margin-top: 35px 
+	margin-top: 35px
 	text-align: center
 	text-transform: uppercase
-	font-size: 12px 
+	font-size: 12px
 	&__link
-		display: block 
-		margin-bottom: 20px 
-		letter-spacing: 1.2px 
-		color: #FFF	
-		+museo-300 
+		display: block
+		margin-bottom: 20px
+		letter-spacing: 1.2px
+		color: #FFF
+		+museo-300
