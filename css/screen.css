@@ -134,7 +134,7 @@ a { -webkit-tap-highlight-color: transparent; text-decoration: none; }
 .menu__sub.is-opened { visibility: visible; opacity: 1; }
 .menu__link { display: block; padding: 20px 0; text-transform: uppercase; font-size: 15px; color: white; letter-spacing: 1.2px; border-bottom: 1px solid white; font-family: "Museo-500", Georgia, serif; }
 .menu__link:hover { background: white; color: #8e85bf; }
-.menu__link-in { display: block; padding: 20px 25px; font-size: 15px; border-bottom: 1px solid #8e85bf; white-space: nowrap; }
+.menu__link-in { display: block; padding: 20px 25px; font-size: 15px; color: #8e85bf; border-bottom: 1px solid #8e85bf; white-space: nowrap; }
 .menu__link-in:last-child { border-bottom: 0; }
 .menu__close { position: absolute; display: none; top: 0; right: 0; padding: 15px; background: #f1f1f2; }
 @media only screen and (max-width: 480px) { .menu { width: 100%; left: -100%; }
