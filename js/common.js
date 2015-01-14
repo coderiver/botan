@@ -27,17 +27,23 @@ head.ready(function() {
 
 	//menu
 	$('.js-menu').click(function() {
-		$('body').addClass('menu-opened');
 		$('.menu').addClass('is-open');
 		$('.js-overlay').css('display', 'block');
 		return false;
 	});
 
 	$('.js-close').click(function() {
-		$('body').removeClass('menu-opened');
 		$('.menu').removeClass('is-open');
 		$('.js-overlay').css('display', 'none');
+		if (!$('.menu').hasClass('is-open')){
+			$('.menu__sub').removeClass('is-opened');
+		};
 		return false;
+	});
+
+	//submenu
+	$('.menu__list-in').click(function(){
+		$('.menu__sub').toggleClass('is-opened');	
 	});
 
 	//jscrollpane
