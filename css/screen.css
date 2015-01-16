@@ -20,17 +20,17 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-html, body { height: 100%; }
-
 body { background: white; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+body.is-active { overflow: hidden; }
 
-.out { height: 100%; min-width: 320px; min-height: 535px; }
+.out { height: 100%; min-width: 320px; }
 
 .onleft { float: left; }
 
 .onright { float: right; }
 
 .overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1; }
+.overlay.is-active { display: block; }
 
 a { -webkit-tap-highlight-color: transparent; text-decoration: none; }
 
@@ -124,24 +124,24 @@ a { -webkit-tap-highlight-color: transparent; text-decoration: none; }
   .main .main__wrap .btn { width: 100%; }
   .main .btn { width: 100%; } }
 
-.menu { position: fixed; left: -405px; top: 0; bottom: 0; width: 325px; text-align: center; background: #8e85bf; z-index: 2; -moz-transition: left 0.3s; -o-transition: left 0.3s; -webkit-transition: left 0.3s; transition: left 0.3s; }
-.menu.is-open { left: 0; }
-.menu__in { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding-top: 30px; }
+.menu { position: fixed; visibility: hidden; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: 2; -moz-transition: visibility 0.3s; -o-transition: visibility 0.3s; -webkit-transition: visibility 0.3s; transition: visibility 0.3s; }
+.menu.is-active { visibility: visible; overflow-y: auto; }
+.menu__in { position: absolute; width: 325px; min-height: 725px; top: 0; left: -405px; right: 0; bottom: 0; padding-top: 30px; text-align: center; background: #8e85bf; -moz-transition: left 0.3s; -o-transition: left 0.3s; -webkit-transition: left 0.3s; transition: left 0.3s; }
+.menu__in.is-open { left: 0; }
 .menu__list-in { position: relative; }
 .menu__list { margin-top: 40px; }
 .menu__list li:first-child { border-top: 1px solid white; }
-.menu__sub { visibility: hidden; position: absolute; top: 0; left: 100%; background: white; opacity: 0; -moz-transition: opacity 0.3s, visibility 0.3s; -o-transition: opacity 0.3s, visibility 0.3s; -webkit-transition: opacity 0.3s, visibility 0.3s; transition: opacity 0.3s, visibility 0.3s; }
-.menu__sub.is-opened { visibility: visible; opacity: 1; }
-.menu__link { display: block; padding: 20px 0; text-transform: uppercase; font-size: 15px; color: white; letter-spacing: 1.2px; border-bottom: 1px solid white; font-family: "Museo-500", Georgia, serif; }
-.menu__link:hover { background: white; color: #8e85bf; }
-.menu__link-in { display: block; padding: 20px 25px; font-size: 15px; color: #8e85bf; border-bottom: 1px solid #8e85bf; white-space: nowrap; }
-.menu__link-in:last-child { border-bottom: 0; }
+.menu__list a { display: block; padding: 20px 0; text-transform: uppercase; font-size: 15px; color: white; letter-spacing: 1.2px; border-bottom: 1px solid white; font-family: "Museo-500", Georgia, serif; }
+.menu__list a:hover { background: white; color: #8e85bf; }
+.menu__sub { visibility: hidden; position: absolute; top: 0; left: 100%; background: white; opacity: 0; -moz-transition: opacity 0.5s, visibility 0.5s; -o-transition: opacity 0.5s, visibility 0.5s; -webkit-transition: opacity 0.5s, visibility 0.5s; transition: opacity 0.5s, visibility 0.5s; }
+.menu__sub a { display: block; padding: 20px 25px; font-size: 15px; color: #8e85bf; border-bottom: 1px solid #8e85bf; white-space: nowrap; text-transform: none; }
+.menu__sub a:last-child { border-bottom: 0; }
+.menu__sub.is-open { visibility: visible; opacity: 1; }
 .menu__close { position: absolute; display: none; top: 0; right: 0; padding: 15px; background: #f1f1f2; }
-@media only screen and (max-width: 480px) { .menu { width: 100%; left: -100%; }
-  .menu__in { overflow: auto; }
+@media only screen and (max-width: 480px) { .menu__in { width: 100%; left: -100%; }
   .menu__close { display: block; }
   .menu__sub { position: static; opacity: 1; display: none; }
-  .menu__sub.is-opened { display: block; } }
+  .menu__sub.is-open { display: block; } }
 
 .call { margin: 34% 0 10%; color: white; text-align: center; }
 .call__txt { margin-top: 23px; font-size: 16px; letter-spacing: 1.3px; font-family: "Museo-500", Georgia, serif; }

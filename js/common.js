@@ -1,50 +1,49 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
-
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
-
-	function toggleSlide(targetId, slideId) {
-		$(targetId).click(function(event) {
-			$(this).toggleClass('is-clicked');
-			$(slideId).toggleClass('is-open');
-			return false;
+	(function(){
+		var body      	  = $('body'),
+			menuWrap  	  = $('.menu'),
+			menu      	  = $('.menu__in'),
+			submenu  	  = $('.menu__sub')
+			overlay   	  = $('.overlay'),		
+			activeClass   = 'is-active';
+			openedClass	  = 'is-open';
+	
+		//menu
+		$('.js-menu').click(function(event) {
+			event.preventDefault();
+			body.addClass(activeClass);
+			menuWrap.addClass(activeClass);
+			menu.addClass(openedClass);
+			overlay.addClass(activeClass);
 		});
-	}
 
-	toggleSlide('#target1', '#slide1');
+		$('.js-close').click(function(event) {
+			event.preventDefault();
+			body.removeClass(activeClass);
+			menuWrap.removeClass(activeClass);
+			menu.removeClass(openedClass);
+			overlay.removeClass(activeClass);
+			if (!menu.hasClass(openedClass)){
+				submenu.removeClass(openedClass);
+			};
+		});
 
-	//menu
-	$('.js-menu').click(function() {
-		$('.menu').addClass('is-open');
-		$('.js-overlay').css('display', 'block');
-		return false;
-	});
+		//submenu
+		$('.menu__list-in > a').click(function(event){
+			event.preventDefault();
 
-	$('.js-close').click(function() {
-		$('.menu').removeClass('is-open');
-		$('.js-overlay').css('display', 'none');
-		if (!$('.menu').hasClass('is-open')){
-			$('.menu__sub').removeClass('is-opened');
-		};
-		return false;
-	});
+			var targetSubmenu = $(this).parent().find(submenu);
+					
+			if(targetSubmenu.hasClass(openedClass)){
+				targetSubmenu.removeClass(openedClass);
+			} else{
+				submenu.removeClass(openedClass);	
+				targetSubmenu.addClass(openedClass);
+			}
+		});
 
-	//submenu
-	$('.menu__list-in').click(function(){
-		$('.menu__sub').toggleClass('is-opened');	
-	});
+	})();	
 
 	//jscrollpane
 	$(function()
@@ -56,5 +55,14 @@ head.ready(function() {
 		$('.js-scroll').jScrollPane();
 	});
 
+	function toggleSlide(targetId, slideId) {
+		$(targetId).click(function(event) {
+			$(this).toggleClass('is-clicked');
+			$(slideId).toggleClass('is-open');
+			return false;
+		});
+	}
+
+	toggleSlide('#target1', '#slide1');
 
 });

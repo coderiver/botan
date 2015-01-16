@@ -71,23 +71,31 @@
 
 .menu
 	position: fixed
-	left: -405px
+	visibility: hidden
 	top: 0
+	left: 0
+	right: 0
 	bottom: 0
-	width: 325px
-	text-align: center
-	background: $violet
+	overflow: hidden
 	z-index: 2
-	+transition(left 0.3s)
-	&.is-open
-		left: 0		
+	+transition(visibility 0.3s)
+	&.is-active
+		visibility: visible 
+		overflow-y: auto
 	&__in
 		position: absolute
+		width: 325px
+		min-height: 725px
 		top: 0
-		left: 0
+		left: -405px
 		right: 0
 		bottom: 0
 		padding-top: 30px
+		text-align: center
+		background: $violet
+		+transition(left 0.3s)
+		&.is-open
+			left: 0		
 	&__list-in
 		position: relative	
 	&__list
@@ -95,6 +103,18 @@
 		li
 			&:first-child
 				border-top: 1px solid $white
+		a
+			display: block
+			padding: 20px 0
+			text-transform: uppercase
+			font-size: 15px
+			color: $white
+			letter-spacing: 1.2px
+			border-bottom: 1px solid $white
+			+museo-500
+			&:hover
+				background: $white
+				color: $violet		
 	&__sub
 		visibility: hidden 
 		position: absolute
@@ -102,31 +122,21 @@
 		left: 100%		
 		background: $white
 		opacity: 0
-		+transition(opacity 0.3s, visibility 0.3s) 	
-		&.is-opened
-			visibility: visible 
-			opacity: 1 		
-	&__link
-		display: block
-		padding: 20px 0
-		text-transform: uppercase
-		font-size: 15px
-		color: $white
-		letter-spacing: 1.2px
-		border-bottom: 1px solid $white
-		+museo-500
-		&:hover
-			background: $white
+		+transition(opacity 0.5s, visibility 0.5s) 	
+		a	
+			display: block
+			padding: 20px 25px
+			font-size: 15px		
 			color: $violet
-	&__link-in
-		display: block
-		padding: 20px 25px
-		font-size: 15px		
-		color: $violet
-		border-bottom: 1px solid $violet	
-		white-space: nowrap
-		&:last-child
-			border-bottom: 0 
+			border-bottom: 1px solid $violet	
+			white-space: nowrap
+			text-transform: none
+			&:last-child
+				border-bottom: 0
+		&.is-open
+			visibility: visible 
+			opacity: 1 	
+			 
 	&__close
 		position: absolute
 		display: none
@@ -135,17 +145,16 @@
 		padding: 15px
 		background: $grey
 	+r(480)
-		width: 100%
-		left: -100%
 		&__in
-			overflow: auto
+			width: 100%
+			left: -100%
 		&__close
 			display: block
 		&__sub
 			position: static
 			opacity: 1 
 			display: none 
-			&.is-opened
+			&.is-open
 				display: block 
 
 .call

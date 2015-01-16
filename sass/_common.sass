@@ -47,19 +47,17 @@
 // p
 // 	+jpg(bla)
 
-html, body
-	height: 100%
-
 body
 	background: #ffffff
 	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
+	&.is-active
+		overflow: hidden
 
 .out
 	height: 100%
 	min-width: 320px
-	min-height: 535px
 
 .onleft
 	float: left
@@ -75,6 +73,8 @@ body
 	bottom: 0
 	background: rgba(0,0,0, 0.5)
 	z-index: 1
+	&.is-active
+		display: block 
 
 a
 	-webkit-tap-highlight-color: transparent
